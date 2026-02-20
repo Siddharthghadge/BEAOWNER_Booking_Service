@@ -26,8 +26,8 @@ public class SecurityConfig {
     private final AuthenticationEntryPoint customAuthenticationEntryPoint;
     private final AccessDeniedHandler customAccessDeniedHandler;
 
-    @Value("${FRONTEND_URLS}")
-    private String frontendUrls; // comma-separated
+    @Value("${app.frontend.url}")
+    private String frontendUrl; // comma-separated
 
     public SecurityConfig(JwtAuthenticationFilter jwtAuthenticationFilter,
                           AuthenticationEntryPoint customAuthenticationEntryPoint,
@@ -77,7 +77,7 @@ public class SecurityConfig {
         CorsConfiguration config = new CorsConfiguration();
 
         // ✅ ENV-based allowed origins
-        List<String> origins = Arrays.stream(frontendUrls.split(","))
+        List<String> origins = Arrays.stream(frontendUrl.split(","))
                 .map(String::trim)
                 .toList();
 
