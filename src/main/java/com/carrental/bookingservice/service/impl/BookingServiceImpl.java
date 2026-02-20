@@ -37,8 +37,9 @@ public class BookingServiceImpl implements BookingService {
     private final RestTemplate restTemplate;
     private final PaymentServiceClient paymentServiceClient;
 
-    @Value("${NOTIFICATION_SERVICE_URL}")
+    @Value("${notification.service.url}")
     private String notificationServiceUrl;
+
 
 
     // ================= CREATE BOOKING =================
