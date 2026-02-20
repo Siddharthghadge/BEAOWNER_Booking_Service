@@ -9,7 +9,7 @@ import java.util.List;
 
 @FeignClient(
         name = "car-service",
-        url = "${CAR_SERVICE_URL}"
+        url = "${CAR.SERVICE.URL}"
 
 )
 public interface CarServiceClient {
