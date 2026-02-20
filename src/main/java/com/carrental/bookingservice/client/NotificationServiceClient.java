@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 // src/main/java/com/carrental/bookingservice/client/NotificationServiceClient.java
-@FeignClient(name = "notification-service", url = "${NOTIFICATION.SERVICE.URL}")
+@FeignClient(name = "notification-service", url = "${notification.service.url}")
 public interface NotificationServiceClient {
     @PostMapping("/api/notifications/booking-success")
     String sendNotification(@RequestBody NotificationRequest request);

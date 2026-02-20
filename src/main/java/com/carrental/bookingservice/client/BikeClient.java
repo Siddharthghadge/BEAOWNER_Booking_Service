@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient(
         name = "bike-service",
-        url = "${BIKE.SERVICE.URL}",
+        url = "${bike.service.url}",
         configuration = FeignConfig.class // ✅ token forwarding stays
 )
 public interface BikeClient {

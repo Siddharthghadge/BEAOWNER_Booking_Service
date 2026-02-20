@@ -28,7 +28,7 @@ import java.math.BigDecimal;
 
 @FeignClient(
         name = "PAYMENT-SERVICE",
-        url = "${PAYMENT.SERVICE.URL}",
+        url = "${payment.service.url}",
         configuration = FeignConfig.class // Ensure this is linked!
 )
 public interface PaymentServiceClient {
